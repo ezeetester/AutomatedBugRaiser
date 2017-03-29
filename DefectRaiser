@@ -1,0 +1,20 @@
+public class DefectRaiser {
+
+
+    public static void main(String[] args) throws InterruptedException {
+         
+        try {
+
+            ProcessBuilder pb = new ProcessBuilder(
+                    "/pathto_testfile.sh");
+            Process p = pb.start();    
+            p.waitFor();              
+            System.out.println("Script execution completed");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+}
