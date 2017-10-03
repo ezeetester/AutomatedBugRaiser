@@ -1,0 +1,38 @@
+package org.raisebugs;
+
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterClass;
+
+public class NewTest {
+	  
+	  DesiredCapabilities dc = DesiredCapabilities.firefox();
+	  WebDriver driver = new FirefoxDriver(dc);
+  @Test
+  public void launchWebsite() throws IOException {
+	  Process proc = Runtime.getRuntime().exec("/home/prasad/eclipse-workspace/javaworkspace/AutoBugRaiser/src/org/raisebugs/testfile.sh");
+	  driver.get("http://www.google.in");
+	  
+	  
+  }
+  @BeforeClass
+  public void beforeClass()
+  {
+	  System.setProperty("webdriver.firefox.bin","/usr/bin/firefox"); 
+	  System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+	  
+	  
+  }
+
+  @AfterClass
+  public void afterClass() {
+	  driver.quit();
+  }
+
+}
