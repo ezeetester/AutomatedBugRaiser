@@ -1,4 +1,4 @@
-public class DefectRaiser {
+public class BugRaiserHighLevel {
 
 
     public static void main(String[] args) throws InterruptedException {
