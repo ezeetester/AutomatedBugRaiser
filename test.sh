@@ -27,8 +27,4 @@ echo "The architecture is: "$(uname -a | awk '{print $13}') >> docfile$TSM.txt
 	fi	 
 	echo " Starting screen recorder.... press Ctrl+C when done"
 	recordmydesktop --no-sound --on-the-fly-encoding
- #	else
-#		echo "Unable to determine if device is SSD or HDD" >> docfile$TSM.txt 	
-#	fi
-	
-#byzanz-record --duration=30 >> video$TSM.webm
+
